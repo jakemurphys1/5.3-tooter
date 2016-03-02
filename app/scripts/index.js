@@ -11,3 +11,9 @@ $(function(){
 
   Post.fetch();
 });
+
+function hello(){
+  return 'hello world';
+}
+
+module.exports = {"hello": hello};

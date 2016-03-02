@@ -1,16 +1,16 @@
 var expect = chai.expect;
 
-require(['./index']);
+require('index');
 
 describe("Post", function(){
   describe("fetch", function(){
     it("should return a promise", function(){
-      var promise = window.Post.fetch();
+      var promise = Post.fetch();
       expect(promise).to.respondTo('then');
     });
 
     it("should resolve with an array of posts", function(done){
-      window.Post.fetch().then(function(posts){
+      Post.fetch().then(function(posts){
         var firstPost = posts[0];
         expect(firstPost).to.have.property('title');
         expect(firstPost).to.have.property('body');
@@ -27,7 +27,7 @@ describe("Post", function(){
         done();
       });
 
-      window.Post.fetch();
+      Post.fetch();
     });
 
   });
