@@ -6,7 +6,8 @@
   ],
 
   "serve_files": [
-    "dist/js/bundle.js",
+    "bower_components/requirejs/require.js",
+    "app/scripts/*/*.js",
     "tests/*.js"
   ],
 
