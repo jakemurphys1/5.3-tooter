@@ -10,4 +10,4 @@ PostView.prototype.showPosts = function(posts){
   });
 };
 
-window.PostView = PostView;
+global.PostView = PostView;
