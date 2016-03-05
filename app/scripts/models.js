@@ -11,4 +11,11 @@ Post.fetch = function(){
   });
 };
 
+Post.fetch = function(){
+  return new $.ajax('http://tiny-lasagna-server.herokuapp.com/collections/posts').then(function(posts){
+    $(document).trigger('create:post', [posts]);
+    return posts;
+  });
+};
+
 global.Post = Post;

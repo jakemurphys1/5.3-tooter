@@ -16,4 +16,10 @@ function hello(){
   return 'hello world';
 }
 
+$("#thisform").submit(function(event){
+  event.preventDefault();
+   var adding = $("#fname").val();
+  $("#thecontainer").append("<p>" + adding + "</p>")
+})
+
 module.exports = {"hello": hello};
